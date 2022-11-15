@@ -13,10 +13,19 @@ const connect = function () {
       console.log(data);
   });
 
+  conn.on('connect', () => {
+  // code that does something when the connection is first established
+      console.log("Successfully connected to game server");
+  });
+  
+  conn.on("connect", () => {
+    conn.write(" Name: MMA");
+  });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  return conn;
+  // return conn;
 
 };
 
