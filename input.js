@@ -3,7 +3,7 @@ const {  MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_LEFT_KEY, MOVE_RIGHT_KEY, MSG } = requ
 let connection;
 
 const setupInput = (conn) => {
-  //setupInput() to accept an object that lets you interact with the server
+//setupInput() to accept an object that lets you interact with the server
   connection = conn;
 
   // stdin object returned by setupInput allows us to listen for keyboard input and react to it
@@ -12,7 +12,7 @@ const setupInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-//handleUserInput that runs when receives input from your keyboard
+  //handleUserInput that runs when receives input from your keyboard
   stdin.on("data", handleUserInput);
 
   return stdin;
@@ -21,7 +21,7 @@ const setupInput = (conn) => {
 
 
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   //handleUserInput should check for the ctrl + c input and terminate the game
   if (key === '\u0003') {
     process.exit();
