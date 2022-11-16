@@ -19,8 +19,8 @@ const setupInput = (conn) => {
 
 
 
-//handleUserInput should check for the ctrl + c input and terminate the game
 const handleUserInput = function (key) {
+  //handleUserInput should check for the ctrl + c input and terminate the game
   if (key === '\u0003') {
     process.exit();
   } if (key === 'w') {
@@ -31,6 +31,8 @@ const handleUserInput = function (key) {
     connection.write('Move: down');
   } if (key === 'd') {
     connection.write('Move: right');
+  } if (key === 'z') {
+    connection.write('Say: I\'m gonna get you!');
   }
 };
 
